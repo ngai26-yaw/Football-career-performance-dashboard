@@ -3,7 +3,14 @@
 # DATA201 Final Project — Ngai Yaw
 # Enhanced Version with Heatmap & Career Success Analysis
 # ============================================================
+import os
+import subprocess
+import sys
 
+try:
+    import matplotlib
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
