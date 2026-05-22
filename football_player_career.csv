@@ -1,0 +1,51 @@
+season,competition,club,appearances,goals,assists,trophies_won,phase,age,minutes_played,injury_status,match_rating,yellow_cards
+2009,Liga Paulista,Santos,28,9,3,1,Youth Prodigy,17,2100,Healthy,7.0,2
+2009,Copa do Brasil,Santos,12,4,2,0,Youth Prodigy,17,900,Healthy,7.1,1
+2009,Brasileirao,Santos,8,1,0,0,Youth Prodigy,17,540,Healthy,6.8,1
+2010,Liga Paulista,Santos,19,20,6,1,Youth Prodigy,18,1620,Healthy,8.3,3
+2010,Copa do Brasil,Santos,14,12,4,1,Youth Prodigy,18,1200,Healthy,8.1,2
+2010,Brasileirao,Santos,18,8,2,0,Youth Prodigy,18,1440,Healthy,7.8,1
+2011,Liga Paulista,Santos,15,10,5,1,Youth Prodigy,19,1200,Healthy,7.9,2
+2011,Copa Libertadores,Santos,13,8,6,1,Youth Prodigy,19,1080,Healthy,8.2,2
+2011,Brasileirao,Santos,19,6,4,0,Youth Prodigy,19,1520,Healthy,7.5,1
+2012,Liga Paulista,Santos,17,20,7,1,Youth Prodigy,20,1440,Healthy,8.7,3
+2012,Copa Libertadores,Santos,14,14,6,0,Youth Prodigy,20,1200,Healthy,8.5,2
+2012,Brasileirao,Santos,16,9,3,0,Youth Prodigy,20,1350,Healthy,8.3,2
+2013,La Liga,Barcelona,15,9,5,0,Rise to Europe,21,1200,Healthy,7.6,3
+2013,Copa del Rey,Barcelona,7,3,2,0,Rise to Europe,21,560,Healthy,7.4,1
+2013,Champions League,Barcelona,8,3,0,0,Rise to Europe,21,640,Healthy,7.2,1
+2014,La Liga,Barcelona,27,22,11,0,Rise to Europe,22,2160,Healthy,8.0,5
+2014,Copa del Rey,Barcelona,7,5,4,1,Rise to Europe,22,560,Healthy,7.9,2
+2014,Champions League,Barcelona,12,4,3,0,Rise to Europe,22,960,Healthy,7.7,1
+2015,La Liga,Barcelona,24,22,8,1,MSN Peak,23,2040,Healthy,8.9,3
+2015,Copa del Rey,Barcelona,7,7,2,1,MSN Peak,23,600,Healthy,8.7,1
+2015,Champions League,Barcelona,12,10,6,1,MSN Peak,23,1020,Healthy,9.0,2
+2015,Club World Cup,Barcelona,2,2,1,1,MSN Peak,23,180,Healthy,8.6,0
+2016,La Liga,Barcelona,26,18,11,1,MSN Peak,24,2080,Healthy,8.6,5
+2016,Copa del Rey,Barcelona,8,6,3,1,MSN Peak,24,640,Healthy,8.4,2
+2016,Champions League,Barcelona,10,5,4,0,MSN Peak,24,800,Healthy,8.2,2
+2016,Supercopa de España,Barcelona,2,1,1,1,MSN Peak,24,180,Healthy,8.0,0
+2017,Ligue 1,PSG,20,19,13,1,PSG Era,25,1600,Healthy,8.3,4
+2017,Coupe de France,PSG,6,4,2,1,PSG Era,25,480,Healthy,8.0,1
+2017,Champions League,PSG,8,3,3,0,PSG Era,25,640,Healthy,7.9,2
+2018,Ligue 1,PSG,17,15,8,1,PSG Era,26,1360,Healthy,7.9,3
+2018,Champions League,PSG,8,6,4,0,PSG Era,26,640,Minor Injury,7.6,2
+2018,Coupe de France,PSG,3,2,1,1,PSG Era,26,240,Healthy,7.5,0
+2019,Ligue 1,PSG,11,11,5,1,Injury Shadow,27,880,Major Injury,7.5,2
+2019,Champions League,PSG,4,2,1,0,Injury Shadow,27,320,Major Injury,7.2,1
+2020,Ligue 1,PSG,15,13,8,1,PSG Era,28,1200,Healthy,8.1,2
+2020,Champions League,PSG,8,3,2,0,PSG Era,28,640,Healthy,8.0,2
+2020,Coupe de France,PSG,4,2,2,1,PSG Era,28,320,Healthy,7.8,0
+2021,Ligue 1,PSG,18,11,7,1,PSG Era,29,1440,Minor Injury,7.7,4
+2021,Champions League,PSG,8,2,1,0,PSG Era,29,640,Minor Injury,7.3,2
+2021,Coupe de France,PSG,2,0,0,1,PSG Era,29,160,Minor Injury,7.0,0
+2022,Ligue 1,PSG,20,13,11,1,PSG Era,30,1600,Healthy,8.0,5
+2022,Champions League,PSG,7,4,5,0,PSG Era,30,560,Healthy,7.9,2
+2022,Coupe de France,PSG,2,1,1,1,PSG Era,30,160,Healthy,7.7,0
+2023,Saudi Pro League,Al-Hilal,5,1,2,1,Decline,31,400,Major Injury,6.9,1
+2023,King's Cup,Al-Hilal,2,0,1,1,Decline,31,160,Major Injury,6.6,0
+2024,Saudi Pro League,Al-Hilal,4,0,1,0,Decline,32,320,Major Injury,6.5,1
+2024,Brasileirao,Santos,2,0,0,0,Decline,32,160,Major Injury,6.4,0
+2025,Brasileirao,Santos,14,4,2,0,Return,33,1120,Recovering,7.5,2
+2025,Copa Sudamericana,Santos,5,2,1,0,Return,33,400,Recovering,7.7,1
+2025,Liga Paulista,Santos,2,0,0,0,Return,33,160,Recovering,7.2,0
