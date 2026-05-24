@@ -22,7 +22,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# ── Load Data (same variable name as your EDA notebook) ──────────────────────
+# ── Load Data ──────────────────────
 @st.cache_data
 def load_data():
     try:
@@ -53,14 +53,20 @@ all_clubs    = ["All"] + sorted(football_df["club"].unique().tolist())
 all_competitions = ["All"] + sorted(football_df["competition"].unique().tolist())  # <-- ADDED
 all_phases   = ["All"] + sorted(football_df["phase"].unique().tolist())
 all_injuries = ["All"] + sorted(football_df["injury_status"].unique().tolist())
+all_seasons = ["All"] + sorted(football_df["season"].astype(str).unique().tolist())
 
+
+sel_season = st.sidebar.selectbox("📅 Select Season", all_seasons)
 sel_club   = st.sidebar.selectbox("🏟️ Select Club",  all_clubs)
 sel_comp       = st.sidebar.selectbox("🏆 Select Competition",  all_competitions) # <-- ADDED
 sel_phase  = st.sidebar.selectbox("📈 Select Career Phase",  all_phases)
 sel_injury = st.sidebar.selectbox("🏥 Select Injury Status", all_injuries)
 
+
 filtered = football_df.copy()
 if sel_club   != "All": filtered = filtered[filtered["club"]          == sel_club]
+if sel_season != "All":
+    filtered = filtered[filtered["season"].astype(str) == sel_season]
 if sel_comp   != "All": filtered = filtered[filtered["competition"]   == sel_comp]   # <-- ADDED
 if sel_phase  != "All": filtered = filtered[filtered["phase"]         == sel_phase]
 if sel_injury != "All": filtered = filtered[filtered["injury_status"] == sel_injury]
