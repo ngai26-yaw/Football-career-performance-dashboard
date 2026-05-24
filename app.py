@@ -393,7 +393,7 @@ else:
 st.caption("📌 heatmap shows two categories — club and season — at the same time using colour. Darker red = more goals. You can instantly see which club-year combinations were the strongest. Risk: a zero cell could mean no games played OR zero goals — both look the same.")
 st.markdown("---")
 
-# ── Chart 7: Match Rating Heatmap — Phase × Competition ── (Cell 46, sns replaced) ──
+# ── Chart 7: Match Rating Heatmap — Phase × Competition  ──
 st.subheader("7. Match Rating Heatmap: Career Phase vs Competition")
 
 heatmap_rating = filtered.pivot_table(
