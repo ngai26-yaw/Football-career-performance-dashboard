@@ -173,15 +173,13 @@ st.divider()
 
 # ════════════════════════════════════════════════════════════
 # SECTION 3 — DATA VISUALIZATIONS
-# Copied from notebook cells 39–43, seaborn replaced with matplotlib
 # ════════════════════════════════════════════════════════════
 st.header("📊 Data Visualizations")
 
 # ── Chart 1: Goals Over Seasons ── (Cell 40) ─────────────────────────────────
 st.subheader("1. Goals Over Seasons")
 
-season_goals = filtered.groupby("season")["goals"].sum()
-
+season_goals = filtered.sort_values("season").groupby("season")["goals"].sum()
 if season_goals.empty:
     st.warning("⚠️ No data. Please adjust the filters.")
 else:
