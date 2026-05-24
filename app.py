@@ -48,7 +48,6 @@ st.divider()
 # SIDEBAR FILTERS
 # ════════════════════════════════════════════════════════════
 st.sidebar.title("🎛️ Filters")
-st.sidebar.markdown("Use these filters to explore different parts of the career.")
 
 all_clubs    = ["All"] + sorted(football_df["club"].unique().tolist())
 all_competitions = ["All"] + sorted(football_df["competition"].unique().tolist())  # <-- ADDED
@@ -205,7 +204,7 @@ else:
     st.pyplot(fig1)
     plt.close(fig1)
 
-st.caption("📌 **Why a line chart?** A line chart is best for showing how a number changes over time. You can clearly see the career growth, the peak years (2012 and 2015), and the sharp decline after 2019 — which links to serious injuries.")
+st.caption("📌 A line chart was used to visualize performance trends across seasons. The chart highlights periods of growth, peak performance, and decline throughout the player’s career.")
 st.markdown("---")
 
 # ── Chart 2: Average Match Rating by Competition ── (Cell 41) ─────────────────
@@ -246,7 +245,7 @@ else:
     st.pyplot(fig2)
     plt.close(fig2)
 
-st.caption("📌 **Why a horizontal bar chart?** Horizontal bars are easier to read when there are many categories with long names. 🟥 Red = lowest-rated competitions · 🟦 Blue = highest-rated competitions. Risk: averages hide how many matches are included per competition.")
+st.caption("📌 This horizontal bar chart compares average performance across different competitions. The color gradient represents rating strength (red = lower ratings, blue = higher ratings).")
 st.markdown("---")
 
 col_left, col_right = st.columns(2)
@@ -278,7 +277,7 @@ with col_left:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close(fig3)
-    st.caption("📌 **Why a scatter plot?** Each dot is one season-competition block. The red trend line shows the direction — higher goal seasons tend to also have more assists. Risk: the relationship is a pattern, not a proven cause.")
+    st.caption("📌  Scatter plot shows relationship between goals and assists. The red trend line shows the direction — higher goal seasons tend to also have more assists. Risk: the relationship is a pattern, not a proven cause.")
 
 # ── Chart 4: Trophies Won by Club ── (Cell 39) ───────────────────────────────
 with col_right:
@@ -303,7 +302,7 @@ with col_right:
         plt.tight_layout()
         st.pyplot(fig4)
         plt.close(fig4)
-    st.caption("📌 **Why a bar chart?** Bar charts are the simplest way to compare whole numbers across clubs. Risk: PSG's trophy count can look inflated because Ligue 1 is a weaker league than La Liga or the Champions League.")
+    st.caption("📌 Bar charts are the simplest way to compare whole numbers across clubs. Risk: PSG's trophy count can look inflated because Ligue 1 is a weaker league than La Liga or the Champions League.")
 
 st.markdown("---")
 
@@ -339,7 +338,7 @@ else:
 
 healthy_avg = football_df[football_df["injury_status"] == "Healthy"]["match_rating"].mean()
 injury_avg  = football_df[football_df["injury_status"] == "Major Injury"]["match_rating"].mean()
-st.caption(f"📌 **Why a bar chart?** Bars directly compare average ratings across health categories. Clear finding: Healthy seasons average **{healthy_avg:.2f}** vs **{injury_avg:.2f}** when seriously injured — a **{abs(healthy_avg - injury_avg):.2f} point drop**. Risk: 'Recovering' label is subjective.")
+st.caption(f"📌 Bars directly compare average ratings across health categories. Clear finding: Healthy seasons average **{healthy_avg:.2f}** vs **{injury_avg:.2f}** when seriously injured — a **{abs(healthy_avg - injury_avg):.2f} point drop**. Risk: 'Recovering' label is subjective.")
 st.markdown("---")
 
 # ── Chart 6: Goals Heatmap — Club × Season ── (Cell 46, sns.heatmap replaced) ──
@@ -387,7 +386,7 @@ else:
     st.pyplot(fig6)
     plt.close(fig6)
 
-st.caption("📌 **Why a heatmap?** A heatmap shows two categories — club and season — at the same time using colour. Darker red = more goals. You can instantly see which club-year combinations were the strongest. Risk: a zero cell could mean no games played OR zero goals — both look the same.")
+st.caption("📌 heatmap shows two categories — club and season — at the same time using colour. Darker red = more goals. You can instantly see which club-year combinations were the strongest. Risk: a zero cell could mean no games played OR zero goals — both look the same.")
 st.markdown("---")
 
 # ── Chart 7: Match Rating Heatmap — Phase × Competition ── (Cell 46, sns replaced) ──
@@ -445,7 +444,7 @@ else:
     st.pyplot(fig7)
     plt.close(fig7)
 
-st.caption("📌 **Why a rating heatmap?** This chart shows two categories at once — career phase and competition — to find which combinations produced the best performance. MSN Peak + Champions League stands out clearly. Grey cells mean no data for that combination.")
+st.caption("📌  This chart shows two categories at once — career phase and competition — to find which combinations produced the best performance. MSN Peak + Champions League stands out clearly. Grey cells mean no data for that combination.")
 st.divider()
 
 # ════════════════════════════════════════════════════════════
