@@ -182,7 +182,7 @@ st.divider()
 # ════════════════════════════════════════════════════════════
 st.header("📊 Data Visualizations")
 
-# ── Chart 1: Goals Over Seasons ── (Cell 40) ─────────────────────────────────
+# ── Chart 1: Goals Over Seasons ── 
 st.subheader("1. Goals Over Seasons")
 
 season_goals = filtered.sort_values("season").groupby("season")["goals"].sum()
@@ -211,7 +211,7 @@ else:
 st.caption("📌 A line chart was used to visualize performance trends across seasons. The chart highlights periods of growth, peak performance, and decline throughout the player’s career.")
 st.markdown("---")
 
-# ── Chart 2: Average Match Rating by Competition ── (Cell 41) ─────────────────
+# ── Chart 2: Average Match Rating by Competition 
 st.subheader("2. Average Match Rating by Competition")
 
 comp_rating = filtered.groupby("competition")["match_rating"].mean().sort_values()
@@ -283,7 +283,7 @@ with col_left:
         plt.close(fig3)
     st.caption("📌  Scatter plot shows relationship between goals and assists. The red trend line shows the direction — higher goal seasons tend to also have more assists. Risk: the relationship is a pattern, not a proven cause.")
 
-# ── Chart 4: Trophies Won by Club ── (Cell 39) ───────────────────────────────
+# ── Chart 4: Trophies Won by Club ── 
 with col_right:
     st.subheader("4. Trophies Won by Club")
     club_trophies = filtered.groupby("club")["trophies_won"].sum().sort_values(ascending=False)
@@ -310,7 +310,7 @@ with col_right:
 
 st.markdown("---")
 
-# ── Chart 5: Injury Impact on Match Rating ── (Cell 43) ──────────────────────
+# ── Chart 5: Injury Impact on Match Rating ── 
 st.subheader("5. Injury Impact on Match Rating")
 
 injury_order = ["Healthy", "Minor Injury", "Recovering", "Major Injury"]
@@ -345,7 +345,7 @@ injury_avg  = football_df[football_df["injury_status"] == "Major Injury"]["match
 st.caption(f"📌 Bars directly compare average ratings across health categories. Clear finding: Healthy seasons average **{healthy_avg:.2f}** vs **{injury_avg:.2f}** when seriously injured — a **{abs(healthy_avg - injury_avg):.2f} point drop**. Risk: 'Recovering' label is subjective.")
 st.markdown("---")
 
-# ── Chart 6: Goals Heatmap — Club × Season ── (Cell 46, sns.heatmap replaced) ──
+# ── Chart 6: Goals Heatmap — Club × Season ── 
 st.subheader("6. Performance Heatmap: Goals by Season and Club")
 
 heatmap_data = filtered.pivot_table(
