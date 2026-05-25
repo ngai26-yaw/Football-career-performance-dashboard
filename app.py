@@ -180,31 +180,47 @@ st.divider()
 # SECTION 3 — DATA VISUALIZATIONS
 # ════════════════════════════════════════════════════════════
 st.header("📊 Data Visualizations")
-
 # ── Chart 1: Goals Over Seasons ── 
 st.subheader("1. Goals Over Seasons")
-
 season_goals = filtered.sort_values("season").groupby("season")["goals"].sum()
 season_goals.index = season_goals.index.astype(int)
+
+season_labels = season_goals.index.astype(str)
+
 if season_goals.empty:
     st.warning("⚠️ No data. Please adjust the filters.")
 else:
     fig1, ax1 = plt.subplots(figsize=(12, 4))
-    ax1.plot(season_goals.index, season_goals.values,
-             marker='o', linewidth=2.5, color='steelblue', markersize=8)
-    ax1.fill_between(season_goals.index, season_goals.values,
-                     alpha=0.18, color='steelblue')
-    for x, y in zip(season_goals.index, season_goals.values):
-        ax1.annotate(str(int(y)), (x, y),
-                     textcoords="offset points", xytext=(0, 8),
-                     ha='center', fontsize=8, fontweight='bold')
+
+    ax1.plot(
+        season_labels,
+        season_goals.values,
+        marker='o',
+        linewidth=2.5,
+        color='steelblue',
+        markersize=8
+    )
+
+    for x, y in zip(season_labels, season_goals.values):
+        ax1.annotate(
+            str(int(y)),
+            (x, y),
+            textcoords="offset points",
+            xytext=(0, 8),
+            ha='center',
+            fontsize=8,
+            fontweight='bold'
+        )
+
     ax1.set_title("Total Goals Over Seasons", fontsize=14, fontweight='bold', pad=15)
     ax1.set_xlabel("Season", fontsize=12, fontweight='bold')
     ax1.set_ylabel("Goals", fontsize=12, fontweight='bold')
     ax1.set_ylim(bottom=0)
     ax1.grid(True, linestyle='--', alpha=0.45)
+
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
+
     st.pyplot(fig1)
     plt.close(fig1)
 
