@@ -119,7 +119,6 @@ season_performance = football_df.groupby('season').agg(
     contribution=('contribution','sum')
 ).reset_index()
 season_performance['season'] = season_performance['season'].astype(int).astype(str)
-
 mg = max(season_performance['goals'].max(), 1)
 ma = max(season_performance['assists'].max(), 1)
 mt = max(season_performance['trophies_won'].max(), 1)
@@ -186,7 +185,7 @@ st.header("📊 Data Visualizations")
 st.subheader("1. Goals Over Seasons")
 
 season_goals = filtered.sort_values("season").groupby("season")["goals"].sum()
-if season_goals.empty:
+season_goals.index = season_goals.index.astype(int)if season_goals.empty:
     st.warning("⚠️ No data. Please adjust the filters.")
 else:
     fig1, ax1 = plt.subplots(figsize=(12, 4))
