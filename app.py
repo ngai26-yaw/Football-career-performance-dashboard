@@ -254,7 +254,7 @@ st.markdown("---")
 
 col_left, col_right = st.columns(2)
 
-# ── Chart 3: Goals vs Assists with Trend Line ── (Cell 42, sns.regplot replaced) ──
+# ── Chart 3: Goals vs Assists with Trend Line ──
 with col_left:
     st.subheader("3. Goals vs Assists Relationship")
     if filtered.empty:
@@ -278,6 +278,8 @@ with col_left:
         ax3.set_xlabel("Goals", fontsize=11, fontweight='bold')
         ax3.set_ylabel("Assists", fontsize=11, fontweight='bold')
         ax3.grid(True, linestyle='--', alpha=0.4)
+        ax3.xaxis.set_major_formatter(plt.ticker.FormatStrFormatter('%d'))
+        ax3.yaxis.set_major_formatter(plt.ticker.FormatStrFormatter('%d'))
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close(fig3)
