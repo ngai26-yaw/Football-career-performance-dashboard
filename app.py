@@ -185,7 +185,8 @@ st.header("📊 Data Visualizations")
 st.subheader("1. Goals Over Seasons")
 
 season_goals = filtered.sort_values("season").groupby("season")["goals"].sum()
-season_goals.index = season_goals.index.astype(int)if season_goals.empty:
+season_goals.index = season_goals.index.astype(int)
+if season_goals.empty:
     st.warning("⚠️ No data. Please adjust the filters.")
 else:
     fig1, ax1 = plt.subplots(figsize=(12, 4))
